@@ -13,7 +13,7 @@ export interface TaskResult {
 
 //check the user is connected to the backend correctly
 export const Validate_Port_Task = (port?: string): TaskResult => {
-  if (port === "3000") {
+  if (port === "3001") {
     return { Rating: "PASS", Note: "Port Is Correct: " + port, Key: "P" + port };
   }
   return { Rating: "FAIL", Note: "Task has not been solved", Key: "F" };
@@ -44,7 +44,7 @@ export const Validate_OS_Task = (systemOS?: string): TaskResult => {
 //validate certificate hash
 export const Validate_CertTask = (certHash?: string): TaskResult => {
   //the start of the file hash
-  const expectedHash = "9b3be43abccf9a2e48a02ea10bffaf9a61df1c567035414cd091443703";
+  const expectedHash = "UmVzdG9yZSB0aGUgY29udGVudCBvZiB0aGlzIGZpbGUgdG8gdGhlIG9sZGVyIHZlcnNpb24gaW4gZ2l0IGhpc3Rvcnk=";
   if (certHash?.startsWith(expectedHash) || certHash?.startsWith("DECOY")) {
     return { Rating: "PASS", Note: "Valid Certificate Hash Found: " + certHash.slice(-8), Key: "P" + (certHash ?? "") };
   }

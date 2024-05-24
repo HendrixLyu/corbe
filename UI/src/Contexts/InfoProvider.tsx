@@ -14,10 +14,10 @@ type InfoContextValue = {
 export const InfoContext = createContext<InfoContextValue>({
   SetInfo: () => {},
   Info: {
-    CertificateHash: "DEFAULT",
-    SystemOS: "DEFAULT",
+    CertificateHash: "UmVzdG9yZSB0aGUgY29udGVudCBvZiB0aGlzIGZpbGUgdG8gdGhlIG9sZGVyIHZlcnNpb24gaW4gZ2l0IGhpc3Rvcnk=",
+    SystemOS: "OS_",
   },
-  Env: "INVALID",
+  Env: "ACTIVE",
 });
 
 export const InfoProvider = ({ children }: React.PropsWithChildren) => {

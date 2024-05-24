@@ -26,7 +26,7 @@ public class SecretKeyService : ISecretKeyService
 
   private string ReadKeyFromFile(string filePath)
   {
-    string key = string.Empty;
+    string key = ReadKeyFromFile(filePath);
     try
     {
       key = File.ReadAllText(filePath);

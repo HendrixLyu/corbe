@@ -13,6 +13,7 @@ builder.Services.AddEndpointsApiExplorer();
 //HINT: dependency injection
 builder.Services.AddScoped<ISecretKeyService, SecretKeyService>();
 builder.Services.AddScoped<IBasicInfoService, BasicInfoService>();
+builder.Services.AddScoped<ICertLocationProvider, CertLocationProvider>();
 
 var app = builder.Build();
 
